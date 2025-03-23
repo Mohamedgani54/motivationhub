@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - MotiveHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+ body {
+      background-color: black;
+      color: white;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 20px;
+    }
+    .logo {
+      color: orangered;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+    nav ul li a:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+    .content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      color: gray;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+    .highlight {
+      color: gray;
+      font-weight: bold;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 40px 0;
+      font-size: 22px;
+      color: #ccc;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #ff4500;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      border-top: 1px solid #444;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+      .content {
+        width: 90%;
+        padding: 15px;
+      }
+      .content h2 {
+        font-size: 24px;
+      }
+      .content p,
+      form input,
+      form textarea,
+      .btn {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 20px;
+      }
+      nav ul li a {
+        padding: 6px 8px;
+        font-size: 14px;
+      }
+      .content {
+        width: 95%;
+        padding: 10px;
+      }
+      .content h2 {
+        font-size: 20px;
+      }
+      .content p,
+      form input,
+      form textarea,
+      .btn {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">MotiveHub</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="motivation.html">Motivation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="content">
+    <h1>About Us</h1>
+    <p>
+      At <span class="highlight">MotiveHub</span>, we believe that every individual holds the spark of greatness within them. Our journey began with a simple yet powerful idea: to create a sanctuary where inspiration and transformation meet. We understand that life is a series of challenges and triumphs, and that each obstacle is a stepping stone toward a brighter future.
+    </p>
+    <p>
+      Our mission is to empower you—whether you’re seeking to overcome anxiety, develop your personal potential, build resilience, or navigate the complexities of modern life. We curate a blend of motivational stories, in-depth articles, and practical strategies designed to nurture your spirit and ignite the drive within you.
+    </p>
+    <p>
+      We are more than just a platform; we are a community of dreamers, doers, and believers who know that true transformation begins from within. Here, you'll find real-life experiences, scientific insights, and heartfelt narratives that resonate with your own journey. Every piece of content is crafted with care and a deep understanding of the human experience.
+    </p>
+    <p class="quote">
+      "The journey of a thousand miles begins with a single step." – Lao Tzu
+    </p>
+    <p>
+      At MotiveHub, we celebrate the small victories and honor the struggles, knowing that each moment contributes to your unique story of growth and achievement. Our team is committed to delivering authentic, actionable content that not only informs but also inspires. We are constantly evolving, learning, and sharing—because we believe that when you feel empowered, you can truly change the world.
+    </p>
+    <a href="index.html" class="btn">Back to Home</a>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 MotiveHub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

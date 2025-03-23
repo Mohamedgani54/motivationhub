@@ -1,0 +1,610 @@
+/* style.css */
+
+/* -------------------------------------------------- */
+/* Basic Reset and Global Styles */
+/* -------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 20px;
+    margin-top: 10px;
+  }
+  .logo {
+    color: #ff4500;
+    font-size: 24px;
+    font-weight: bold;
+    
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+    padding: 0;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    
+  }
+  nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    
+  }
+  /* Responsive Navigation: stack links on small screens */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  /* -------------------------------------------------- */
+  /* Hero Section */
+  /* -------------------------------------------------- */
+  .hero {
+    position: relative;
+    background: url('./mot.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #f5f5f5;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Slight dark overlay for balance */
+    z-index: 0;
+}
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff; /* Pure white for a crisp look */
+}
+
+.hero p {
+    font-size: 22px;
+    max-width: 700px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: white; /* A slightly softer white for body text */
+}
+  
+  /* Reduce hero text size on smaller screens */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 32px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
+  }
+  
+  /* -------------------------------------------------- */
+  /* Shared Content Styles */
+  /* -------------------------------------------------- */
+  .content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  h2 {
+    color: #ff4500;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+/* Premium Title Section Styling */
+.grid-title {
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 150px; /* Adds space between hero and grid title */
+  }
+  
+  
+  .grid-title::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: red; /* Accent color */
+    border-radius: 2px;
+  }
+  
+  .grid-title .container {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .grid-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin: 0 0 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .grid-title p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: #ccc;
+  }
+  /* -------------------------------------------------- */
+  /* Responsive Grid */
+  /* -------------------------------------------------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 50px;
+    margin-top: 100px;
+  }
+  
+  
+figure {
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+figcaption {
+    color: grey;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+/* Testimonials Section */
+.testimonials {
+    padding: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.testimonial {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+}
+.testimonial h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-style: normal;
+    color: #ff4500;
+}
+
+  /* -------------------------------------------------- */
+  /* Images */
+  /* -------------------------------------------------- */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* -------------------------------------------------- */
+  /* Buttons */
+  /* -------------------------------------------------- */
+  .btn {
+    display: inline-block;
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+  }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav ul {
+          flex-direction: column;
+          margin-top: 10px;
+        }
+        nav ul li {
+          margin: 5px 0;
+        }
+        .hero h1 {
+          font-size: 32px;
+        }
+        .hero p {
+          font-size: 18px;
+        }
+        .grid-title h2 {
+          font-size: 36px;
+        }
+        .grid-title p {
+          font-size: 18px;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 30px;
+        }
+        /* Adjust testimonial grid on smaller screens */
+        .testimonial-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 20px;
+        }
+        nav ul li a {
+          padding: 6px 8px;
+          font-size: 14px;
+        }
+        .hero h1 {
+          font-size: 24px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+        .grid-title h2 {
+          font-size: 28px;
+        }
+        .grid-title p {
+          font-size: 16px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+          padding: 20px;
+        }
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+          }
+          .testimonial {
+            max-width: 90%;
+          }
+      }
+      @media (max-width: 360px) {
+        nav ul li a {
+          padding: 4px 6px;
+          font-size: 12px;
+        }
+        .logo {
+          font-size: 18px;
+        }
+        .hero h1 {
+          font-size: 20px;
+        }
+        .hero p {
+          font-size: 14px;
+        }
+        .grid-title h2 {
+          font-size: 24px;
+        }
+        .grid-title p {
+          font-size: 14px;
+        }
+        .testimonial {
+            padding: 15px;
+            font-size: 14px;
+          }
+          .testimonial h4 {
+            font-size: 16px;
+          }
+      }
+      @media (max-width: 320px) {
+        nav ul li a {
+          padding: 2px 4px;
+          font-size: 10px;
+        }
+        .logo {
+          font-size: 16px;
+        }
+        .hero h1 {
+          font-size: 18px;
+        }
+        .hero p {
+          font-size: 12px;
+        }
+        .grid-title h2 {
+          font-size: 20px;
+        }
+        .grid-title p {
+          font-size: 12px;
+        }
+        .testimonial {
+            padding: 10px;
+            font-size: 12px;
+          }
+          .testimonial h4 {
+            font-size: 14px;
+          }
+        }
+   /* For small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Navigation */
+    nav ul li a {
+      font-size: clamp(16px, 1.5vw, 18px);
+      padding: 8px 12px;
+    }
+    /* Hero Section */
+    .hero h1 {
+      font-size: clamp(30px, 3vw, 36px);
+    }
+    .hero p {
+      font-size: clamp(18px, 2vw, 20px);
+    }
+    /* Grid Title */
+    .grid-title h2 {
+      font-size: clamp(32px, 3vw, 36px);
+    }
+    .grid-title p {
+      font-size: clamp(16px, 2vw, 18px);
+    }
+    /* Main Grid Section */
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+    }
+    /* Testimonials */
+    .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For medium screens (1025px - 1366px) */
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    /* Navigation */
+    nav ul li a {
+      font-size: clamp(18px, 2vw, 20px);
+      padding: 10px 14px;
+    }
+    /* Hero Section */
+    .hero h1 {
+      font-size: clamp(34px, 3.5vw, 40px);
+    }
+    .hero p {
+      font-size: clamp(20px, 2.5vw, 22px);
+    }
+    /* Grid Title */
+    .grid-title h2 {
+      font-size: clamp(36px, 3.5vw, 42px);
+    }
+    .grid-title p {
+      font-size: clamp(18px, 2.5vw, 20px);
+    }
+    /* Main Grid Section */
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+      padding: 50px;
+    }
+    /* Testimonials */
+    .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For large screens (1367px - 1440px) */
+  @media (min-width: 1367px) and (max-width: 1440px) {
+    /* Navigation */
+    nav ul li a {
+      font-size: clamp(20px, 2.2vw, 22px);
+      padding: 10px 16px;
+    }
+    /* Hero Section */
+    .hero h1 {
+      font-size: clamp(38px, 3.8vw, 44px);
+    }
+    .hero p {
+      font-size: clamp(22px, 2.8vw, 24px);
+    }
+    /* Grid Title */
+    .grid-title h2 {
+      font-size: clamp(38px, 3.8vw, 44px);
+    }
+    .grid-title p {
+      font-size: clamp(20px, 2.8vw, 22px);
+    }
+    /* Main Grid Section */
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding: 60px;
+    }
+    /* Testimonials */
+    .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* For extra-large screens (1441px and up) */
+  @media (min-width: 1441px) {
+    /* Navigation */
+    nav ul li a {
+      font-size: clamp(22px, 2.5vw, 24px);
+      padding: 12px 18px;
+    }
+    .logo {
+      font-size: 50px;
+    }
+    /* Hero Section */
+    .hero h1 {
+      font-size: clamp(42px, 3.5vw, 50px);
+    }
+    .hero p {
+      font-size: clamp(24px, 3vw, 28px);
+    }
+
+  .grid-title h2 {
+        font-size: clamp(42px, 3.5vw, 50px);
+      }
+      .grid-title p {
+        font-size: clamp(22px, 3vw, 26px);
+
+  }
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Grid Container */
+
+  /* For extra-large screens, force exactly 3 columns */
+  @media (min-width: 1441px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Image Container: Uniform Aspect Ratio */
+  .img-container {
+    width: 100%;
+    aspect-ratio: 16/9;  /* Uniform 16:9 ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    background: transparent;
+  }
+  
+  /* Default Image Styling */
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+  
+  /* For resilience and gym images: crop them down */
+  .img-container img.cropped-down {
+    object-fit: cover;
+    object-position: 5% 10%; /* Adjust as needed */
+  }
+  
+  /* Ensure the figure expands to fit both image container and caption */
+  .grid figure {
+    display: block;
+    overflow: visible; /* Prevent clipping of figcaption */
+    position: relative;
+    background: transparent;
+  }
+  
+  /* Figcaption Styling */
+  .grid figure figcaption {
+    display: block;
+    margin-top: 10px;
+    font-size: clamp(18px, 2.2vw, 26px);
+    color: #555;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.8);  /* Temporary background for debugging */
+    padding: 5px 0;
+  }
+  
+  /* Remove the temporary background once visible:
+  .grid figure figcaption { background: transparent; }
+  */
+  
+  /* Media Query for extra-large screens to ensure grid layout */
+  @media (min-width: 1441px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* For screens below 1440px, use auto-fit grid */
+  
+  /* Image Container with Uniform Aspect Ratio */
+ 
+  
+  /* Figcaption Styling */
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    border-top: 1px solid #444;
+}
+.footer-social {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ff4500; /* Accent color on hover */
+}
+  

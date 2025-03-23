@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Resilience - MotiveHub</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 15px 20px;
+    }
+    .logo {
+      color: #ff4500;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+    nav ul li a:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+    .content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      color: gray;
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+    ul {
+      margin-left: 20px;
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 40px 0;
+      font-size: 22px;
+      color: #ccc;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #ff4500;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #111;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Ratio */
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+   
+    
+    /* For Tablets & Smaller Devices */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+      .content {
+        width: 90%;
+        padding: 15px;
+      }
+      .content h1 {
+        font-size: 28px;
+      }
+      .content p, .content li, .quote {
+        font-size: 16px;
+      }
+    }
+    
+     /* For Very Small Devices (Phones) */
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 20px;
+      }
+      nav ul li a {
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+      .content {
+        width: 95%;
+        padding: 10px;
+      }
+      .content h1 {
+        font-size: 24px;
+      }
+      .content p, .content li, .quote {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 360px) {
+      nav ul li a {
+        padding: 4px 6px;
+        font-size: 12px;
+      }
+      .logo {
+        font-size: 18px;
+      }
+      .content {
+        padding: 8px;
+      }
+      .content h1 {
+        font-size: 20px;
+      }
+      .content p, .content li, .quote {
+        font-size: 12px;
+      }
+      .btn {
+        padding: 6px;
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 320px) {
+      nav ul li a {
+        padding: 2px 4px;
+        font-size: 10px;
+      }
+      .logo {
+        font-size: 16px;
+      }
+      .content {
+        width: 98%;
+        padding: 5px;
+      }
+      .content h1 {
+        font-size: 18px;
+      }
+      .content p, .content li, .quote {
+        font-size: 10px;
+      }
+      .btn {
+        padding: 4px;
+        font-size: 10px;
+      }
+    }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">MotiveHub</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="motivation.html">Motivation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="content">
+    <h1>Building Resilience: Rising Stronger Every Day</h1>
+    <p>
+      Resilience is the inner strength that enables you to bounce back from life’s challenges. It isn’t about avoiding adversity—it’s about transforming setbacks into stepping stones toward a more empowered future. Here at Motiversity, we believe every setback carries the seed of a new beginning.
+    </p>
+    <p>
+      Developing resilience means nurturing a mindset that sees difficulties as opportunities to grow. Embrace vulnerability, learn from past experiences, and let every challenge teach you something new about your strength.
+    </p>
+    <p>
+      <strong>Essential Practices for Building Resilience:</strong>
+    </p>
+    <ul>
+      <li><strong>Embrace Change:</strong> View change as a doorway to new growth rather than a threat.</li>
+      <li><strong>Build a Support System:</strong> Connect with friends, mentors, and communities that uplift you.</li>
+      <li><strong>Practice Self-Reflection:</strong> Regularly evaluate your thoughts and emotions to better manage stress.</li>
+      <li><strong>Set Realistic Goals:</strong> Break challenges into small, achievable tasks and celebrate every win.</li>
+      <li><strong>Cultivate a Positive Outlook:</strong> Focus on gratitude and learn from every experience.</li>
+    </ul>
+    <p class="quote">
+      "Resilience is knowing that you are the only one that has the power and the responsibility to pick yourself up." – Bob Marley
+    </p>
+    <p>
+      The journey to resilience is ongoing and uniquely personal. With patience and self-care, every obstacle becomes a catalyst for growth, paving the way for a stronger, more empowered you.
+    </p>
+    <h3>Watch This Video on Resilience</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/3qELiw_1Ddg?si=X1bne8gpmaMy4-xF" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <a href="gym.html" class="btn">Gym</a>
+
+  </section>
+  <footer>
+    <p>&copy; 2025 MotiveHub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
